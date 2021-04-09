@@ -9,7 +9,7 @@ import java.sql.DriverManager;
 public class DatabaseService {
     private static final String HOST = "localhost";
     private static final String PORT = "3306";
-    private static final String SCHEMA = "ase-assignment";
+    private static final String SCHEMA = "ase-asg2team84";
     private static final String USERNAME = "root";
     private static final String PASSWORD = "";
 
