@@ -1,21 +1,20 @@
 /* Create database */
-create database `ase-assignment`;
+create database `ase-asg2team84`;
 
 /* Create table */
-CREATE TABLE `ase-assignment`.`Login` (
+CREATE TABLE `ase-asg2team84`.`Login` (
   `username` VARCHAR(15) NOT NULL,
-  `password` VARCHAR(20) NOT NULL,
+  `password` VARCHAR(15) NOT NULL,
   PRIMARY KEY (`username`));
 
 /* Populating the value from database*/
-INSERT INTO `ase-assignment`.`login` (`username`, `password`) VALUES ('adam',  'steve');
-INSERT INTO `ase-assignment`.`login` (`username`, `password`) VALUES ('root', 'admin');
-INSERT INTO `ase-assignment`.`login` (`username`, `password`) VALUES ('test', 'test2');
-INSERT INTO `ase-assignment`.`login` (`username`, `password`) VALUES ('abram',  'aben');
+INSERT INTO `ase-asg2team84`.`login` (`username`, `password`) VALUES ('admin',  'admin123');
+INSERT INTO `ase-asg2team84`.`login` (`username`, `password`) VALUES ('iskandar', '123');
+INSERT INTO `ase-asg2team84`.`login` (`username`, `password`) VALUES ('rachel', '123');
+INSERT INTO `ase-asg2team84`.`login` (`username`, `password`) VALUES ('daniel',  '123');
 
 /** Template to add more records (Specify the values in the brackets) */
-INSERT INTO `ase-assignment`.`login` (`username`, `password`) VALUES (``, ``)
-
+INSERT INTO `ase-asg2team84`.`login` (`username`, `password`) VALUES (``, ``)
 
 /* Show all login info */
-Select * from `ase-assignment`.`login`;
+Select * from `ase-asg2team84`.`login`;
