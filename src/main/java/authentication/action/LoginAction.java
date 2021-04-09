@@ -41,7 +41,7 @@ public class LoginAction extends ActionSupport {
             // Authenticate user via SQL query
             loginSuccess = LoginService.validateLogin(conn, personBean.getUsername(), personBean.getPassword());
             if (!loginSuccess) {
-                addFieldError("error", "Wrong username or password provided");
+                addFieldError("error", "Incorrect username or password.");
             }
         } catch (Exception e) { // Handles exception thrown by validateLogin
             addFieldError("error", e.getMessage());
