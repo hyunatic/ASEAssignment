@@ -24,7 +24,6 @@
             <li><a href="home.jsp">Home</a></li>
             <li><a href="login.jsp">Login</a></li>
           </ul>
-
           <ul id="nav-mobile" class="sidenav">
             <li><a href="home.jsp">Home</a></li>
             <li><a href="login.jsp">Login</a></li>
@@ -40,10 +39,10 @@
             <s:fielderror fieldName="error" cssClass="errorMessage" />
             <s:form action="login">
               <div class="input-field col s6">
-                <s:textfield cssClass="validate" name="personBean.username" placeholder="Enter Username Here" />
+                <s:textfield cssClass="validate" name="userA.username" placeholder="Enter Username Here" />
               </div>
               <div class="input-field col s6">
-                <s:password name="personBean.password" placeholder="Enter Password Here" />
+                <s:password name="userA.password" placeholder="Enter Password Here" />
               </div>
               <s:submit cssClass="btn red" />
             </s:form>
@@ -59,8 +58,6 @@
               <p class="grey-text text-lighten-4">We are a team of NTU students working on this project like it's our
                 full time job. Any amount would help support and continue development on this project and is greatly
                 appreciated.</p>
-
-
             </div>
             <div class="col l3 s12">
               <h5 class="white-text">Team Member</h5>
@@ -86,7 +83,5 @@
           </div>
         </div>
       </footer>
-
     </body>
-
     </html>
