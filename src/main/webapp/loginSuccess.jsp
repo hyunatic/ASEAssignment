@@ -1,9 +1,7 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
    <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-
       <!DOCTYPE html>
       <html>
-
       <head>
          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
@@ -40,7 +38,7 @@
                      <span class="card-title red-text">Profile</span>
                    </div>
                    <div class="card-content">
-                     <p>Welcome, <b><s:property value="personBean" /></b></p>
+                     <p>Welcome, <b><s:property value="userA" /></b></p>
                    </div>
                    <div class="card-action">
                      <a class="red-text" href="home.jsp">Back to Home</a>
@@ -57,7 +55,6 @@
                </div>
              </div>
          </div>
-
          <footer class="page-footer red">
             <div class="container">
                <div class="row">
@@ -68,8 +65,6 @@
                         full time job. Any amount would help support and continue development on this project and is
                         greatly
                         appreciated.</p>
-
-
                   </div>
                   <div class="col l3 s12">
                      <h5 class="white-text">Team Member</h5>
@@ -96,5 +91,4 @@
             </div>
          </footer>
       </body>
-
       </html>
