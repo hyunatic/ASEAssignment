@@ -4,7 +4,7 @@ import java.sql.Connection;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-import authentication.model.Person;
+import authentication.model.User;
 import authentication.services.DatabaseService;
 import authentication.services.LoginService;
 
@@ -12,19 +12,18 @@ import authentication.services.LoginService;
  * Acts as a controller to handle actions related to user login.
  */
 public class LoginAction extends ActionSupport {
-    private static final long serialVersionUID = 1L;
 
-    private Person personBean;
+    private User userA;
 
     /**
      * Handles validation of user input
      */
     public void validate() {
-        if (personBean.getUsername().length() == 0) {
-            addFieldError("personBean.username", "Username cannot be empty.");
+        if (userA.getUsername().length() == 0) {
+            addFieldError("userA.username", "Username cannot be empty.");
         }
-        if (personBean.getPassword().length() == 0) {
-            addFieldError("personBean.password", "Password cannot be empty.");
+        if (userA.getPassword().length() == 0) {
+            addFieldError("userA.password", "Password cannot be empty.");
         }
     }
 
@@ -39,7 +38,7 @@ public class LoginAction extends ActionSupport {
         }
         try {
             // Authenticate user via SQL query
-            loginSuccess = LoginService.validateLogin(conn, personBean.getUsername(), personBean.getPassword());
+            loginSuccess = LoginService.validateLogin(conn, userA.getUsername(), userA.getPassword());
             if (!loginSuccess) {
                 addFieldError("error", "Incorrect username or password.");
             }
@@ -56,21 +55,11 @@ public class LoginAction extends ActionSupport {
         return loginSuccess ? SUCCESS : ERROR;
     }
 
-    /**
-     * Gets personBean variable
-     * 
-     * @return Person object
-     */
-    public Person getPersonBean() {
-        return personBean;
+    public User getUserA() {
+        return userA;
     }
 
-    /**
-     * Sets personBean variable
-     * 
-     * @param person Person object
-     */
-    public void setPersonBean(Person person) {
-        personBean = person;
+    public void setUserA(User user) {
+        userA = user;
     }
 }
